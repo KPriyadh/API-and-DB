@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title>Grocery Store</title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <div id="home">
+            <h2></h2>
+            <button type="button" class="button" onclick="newUser()">SignUp</button>
+            <button type="button" class="button" onclick="existingUser()">SignIn</button>
+        </div>
+        <div id="newUser">       
+            <h3>SignUp Page</h3>
+            <form id="form" >
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" onkeyup="checkEmail('email')" style="margin-left: 100px;"><br><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" onkeyup="checkEmail('email')" style="margin-left: 100px;">
+            <label id="emailMessage"></label><br><br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" onkeyup="checkPassword('password')" style="margin-left: 78px;">
+            <label id="passwordMessage"></label><br><br>
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" name="cpassword" id="cpassword" onkeyup="checkConfirmPassword('cpassword','password')" style="margin-left: 21px;">
+            <label id="cpassMessage"></label><br><br>
+            <label>User Phone Number: </label>
+            <input type="number" name="userPhonenumber" id="newUserPhonenumber" onkeyup="checkPhoneNumber('newUserPhonenumber')" style="margin-left: 8px;"><br><br>
+            <label>Balance: </label>
+            <input type="number" name="balan" id="balan" style="margin-left: 88px;" ><br><br>
+           
+            <label>Photo</label>
+            <input type="file" name="photo" id="photo" >
+            <input type="submit" value="submit" class="button">
+           </form>
+            
+        </div>
+        <div id="existingUser">
+            <label style="text-align: center;">User Sign in</label><br><br>
+            <label>Email ID : </label>
+            <input type="text" id="existingUserEmail"><br><br>
+            <label >Password : </label>
+            <input type="password"  id="existingUserPassword"><br><br>
+            <button type="button" onclick="SignIn()" class="button">SignIn</button><br>
+            <label id="availableUser"></label>
+        </div>
+
+        <div id="menubar">
+            <button class="button"  onclick="homePage()">Home</button>
+            <button class="button"  onclick="groceryDetails()">Grocery Details</button>
+            <button class="button"  onclick="purchase()">Purchase</button>            
+            <button class="button"  onclick="Topup()">TopUp</button>  
+            <button class="button" onclick="Cart()">Cart</button>           
+            <button class="button" onclick="showHistory()">Order History</button>
+            <button class="button"  onclick="menuPage()">Back</button>
+        </div>
+        <br>
+        <div id="groceryinfo">
+            <h3>Grocery List</h3>
+            <button  onclick="Add()" class="button">Add</button><br>
+            <div id="AddDiv">
+                <form id="form1">
+                <label>Enter Material Name: </label>
+                <input type="text" name="materialname" id="materialname"><br><br>
+                <label>Enter Material count: </label>
+                <input type="number" name="materialcount" id="materialcount"><br><br>
+                <label>Enter Unit Price: </label>
+                <input type="number" name="materialprice" id="materialprice"><br><br>
+                <label>Enter Purchase date: </label>
+                <input type="date" name="purchasedate" id="npurchasedate"><br><br>
+                <label>Enter Expiry date: </label>
+                <input type="date" name="expirydate" id="nexpirydate"><br><br>
+                <input type="file" name="materialphoto" id="materialphoto" >
+                <input class="button" type="submit" value="submit" class="button">
+                
+            </form>
+            </div>
+        </div>
+        <div id="groc">
+            <table border="2" id="dataTable1">
+                <thead>
+                    <tr>
+                        <th>Grocery Name</th>
+                        <th>Material  Count</th>
+                        <th>Unit Price</th>
+                        <th>Purchase Date</th>
+                        <th>Expiry Date</th>
+                        <th>Image</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="purchase">
+            <h3>Purchase</h3>
+            <table border="2" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Grocery Name</th>
+                        <th>Material  Count</th>
+                        <th>Unit Price</th>
+                        <th>Purchase Date</th>
+                        <th>Expiry Date</th>
+                        <th>Image</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+            <div id="purchasedetails">
+                <label>Enter the Quantity Needed </label><input type="number" id="requirecount">
+                <button onclick="buyMedicine()" class="button">Buy</button>
+            </div>
+        
+            <div id="userphoto">
+
+            </div>
+            
+            <div id="historyDisplay">
+            <table id="displaytable" border="2">
+                <a><button id="exportID" onclick="ExportData()" class="button">Export</button></a><br>
+                <thead>
+                    <tr>   
+                        <th>UserID </th>
+                        <th>MaterialID</th>
+                        <th>MaterialName</th>
+                        <th>Quantity</th>
+                        <th>OrderPrice</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="welcome">
+            <label ></label>
+        </div>
+        
+        <div id="suff">
+            <h3>Insufficent Balance ... Please Recharge</h3>
+        </div>
+        <div id="topup">
+            <label id="currentBalance">CurrentBalance :</label><br>
+            <Label>Enter Recharge Amount</Label>
+            <input type="number" id="amount"><br><br>
+            <button class="button" type="button" onclick="recharge()">Recharge</button>
+            <label id="rechargebalance">
+            <p>TopUp Successfully done....</p>
+            <label id="afterTopup">Your CurrentBalance is : </label>
+            </label>
+        </div>
+        <div id="showBalance">
+            <label id="balance"></label>
+        </div>
+        <div id="back">
+            <h3>Click On the Purchase Button Again For Purchase</h3>
+        </div>      
+        <script src="index.js"></script>
+    </body>
+</html>

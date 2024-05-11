@@ -1,0 +1,158 @@
+#newUser{
+    display: none;
+}
+#existingUser{
+    display:none;
+}
+#menubar{
+    display:none;
+}
+#menubar{
+    background-color: black;
+    color:white;
+    font-family: sans-serif;
+    padding: 10px;;
+}
+.button{
+    background-color: rgb(113, 8, 211);
+    color:white;
+    padding: 10px;
+    margin-right: 10px;
+}
+#welcome{
+    display:none;
+    text-align: center;
+    background-color: rgb(241, 40, 225);
+    
+}
+#groceryinfo{
+    display: none;
+    display: none;
+   
+    font-family: sans-serif;
+    color: blue;
+}
+#userphoto{
+    display:none;
+    text-align: center;
+    background-color: rgb(241, 40, 225);
+    font-size: 20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+
+}
+#topup{
+    display:none;
+}
+
+#topup{
+   
+    padding-top: 60px;
+    background-color: palevioletred;
+    font-family: sans-serif;
+    color:black;
+}
+
+#rechargebalance{
+    text-align: center;
+    padding-bottom: 10px;
+}
+#cartdiv{
+    display:none;
+}
+#suff{
+    display: none;
+    background-color: crimson;
+    font-family: sans-serif;
+    text-align: center;
+}
+#back{
+    display: none;
+}
+#groc{
+    display: none;
+}
+
+#purchase{
+    display: none;
+    
+    font-family: sans-serif;
+    color: blue;
+}
+#purchasedetails{
+    display: none;
+}
+
+#showBalance{
+    display: none;
+    text-align: center;
+    background-color: rgb(160, 220, 20);
+    font-family: sans-serif;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+#historyDisplay{
+    display: none;
+}
+#home{
+    background-color: rgb(23, 149, 223);
+    color:blue;
+    text-align: center;
+    padding:80px;
+}
+#newUser{
+    background-color: rgb(200, 35, 90);
+    border-style:double;
+    border-width: 5px;
+    border-color: rgb(116, 15, 211);
+    color:rgb(4, 4, 4);
+    width: 35%;
+    
+    margin-left: 500px;
+    margin-top: 50px;
+}
+#existingUser{
+    background-color: rgb(200, 35, 90);
+    border-style:double;
+    border-width: 5px;
+    border-color: rgb(116, 15, 211);
+    color:rgb(4, 4, 4);
+    width: 35%;
+    
+    margin-left: 500px;
+    margin-top: 50px;
+
+}
+#dataTable1{
+    background-color: rgb(75, 190, 33);
+    border-color: rgb(31, 70, 211);
+    border-width: 10px;
+    border-collapse: collapse;
+    text-align: center;
+    width: 90%;
+}
+#dataTable{
+    background-color: rgb(62, 190, 33);
+    border-color: rgb(31, 70, 211);
+    border-collapse:collapse;
+    border-width: 10px;
+    text-align: center;
+    width: 90%;
+}
+#displaytable{
+    background-color: rgb(62, 190, 33);
+    border-color: rgb(31, 70, 211);
+    border-width: 10px;
+    border-collapse: collapse;
+    text-align: center;
+    width: 90%;
+
+}
+#purchasedetails{
+    background-color: rgb(136, 17, 63);
+
+}
+body{
+    background-color: pink;
+}
